@@ -9,22 +9,16 @@
 <body>
     <nav class="topnav">
         <a href="#">Home</a>
-        <a href="#">LUTSHINGA LWA  NELUHENI</a>
-       <a href="#">Vhadau</a>
+        <a href="#">LUTSHINGA LWA NELUHENI</a>
+        <a href="#">Vhadau</a>
     </nav>
     <header>
         <img src="http://static1.squarespace.com/static/562cfd50e4b0db46045fb676/5968da22a803bb3693f5b811/5f90a2e0f7584476674704c4/1717894054920/?format=1500w" alt="Lion">
         <h1>Tshiheni Tsha Nyaphunga Tshena</h1>
-
     </header>
     <div class="content">
         <p>NNDU/Lutsinga Lwa Neluheni</p>
-
-            <p>Neluheni Ndi Mudau wa Mutavhatsindi wa Tshiheni</p>
-
-
-        </div>
-
+        <p>Neluheni Ndi Mudau wa Mutavhatsindi wa Tshiheni</p>
     </div>
     <script src="script.js"></script>
 </body>
@@ -34,6 +28,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    padding-top: 50px; /* To account for the fixed navbar */
 }
 
 .topnav {
@@ -95,6 +90,19 @@ header h1 {
     border: 1px solid #ddd;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 600px) {
+    .topnav a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+    
+    header h1 {
+        font-size: 2em;
+        padding: 10px;
+    }
 }
 </style>
 <!DOCTYPE html>
@@ -205,7 +213,6 @@ header h1 {
     </script>
 </body>
 </html>
-<div>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -235,33 +242,23 @@ header h1 {
         <h2>History of Neluheni</h2>
         <p>To be added...</p>
         <div class="emoji">🌊</div>
- <h2>Mutshaeni and Neluheni</h2>
+        <h2>Mutshaeni and Neluheni</h2>
         <p>Johannes Mutshaeni, who worked closely with Beuster, contributed greatly to the establishment of the mission station. Mutshaeni (also known as Malindi Neluheni) was born at Tshiheni, an area close to Lake Fundudzi, and was brought up there (Mathivha 1985:45). At that time many youth flocked to Kimberly (Khimbini) in search of wealth. Mutshaeni also</p>
-
-
         <h2>Tshiheni Tshatshiongo</h2>
-        <p>Tshiheni Tshatshiongo,
-Fundudzi La Nyaphungatshena.
-Fundudzi La muitazwivo, wa murahu e ndi doko!
-La Nyamalindi a dala vhathu,
-A vhavhe a tshi dala mavhele
-Vha lutsinga lwa </p>
-<h2>Ndiitwani, Masutha,
-Manyaga, Madima, Mutshaeni na Maraga!</h2>
-<p>
-Nho Nefundudzi n si Iitwa Iwuwe,
-Nga ngwena, khovhe na ngngu tshitangadzimeni,
-Ene dzolokwe Mutavhatsindi linga,
-Tshifhe thi nangwi nga zwiḓuḓwane na khuli!
-Fundudzi ḽi midza Khomba dza vhudzimu.
-Khuni ḓzalo zwifhoni a dzi na murḓi.
-Ndi vhonelapwata mutonzela Khomba tshilindo
-Fundudzi ḽa mulambotswuka vhukati Mi... fhululuuuu!</p>
+        <p>Tshiheni Tshatshiongo, Fundudzi La Nyaphungatshena. Fundudzi La muitazwivo, wa murahu e ndi doko! La Nyamalindi a dala vhathu, A vhavhe a tshi dala mavhele Vha lutsinga lwa </p>
+        <h2>Ndiitwani, Masutha, Manyaga, Madima, Mutshaeni na Maraga!</h2>
+        <p>Nho Nefundudzi n si Iitwa Iwuwe, Nga ngwena, khovhe na ngngu tshitangadzimeni, Ene dzolokwe Mutavhatsindi linga, Tshifhe thi nangwi nga zwiḓuḓwane na khuli! Fundudzi ḽi midza Khomba dza vhudzimu. Khuni ḓzalo zwifhoni a dzi na murḓi. Ndi vhonelapwata mutonzela Khomba tshilindo Fundudzi ḽa mulambotswuka vhukati Mi... fhululuuuu!</p>
         <p>Fundudzi lanyaphunga tshena</p>
-
-<h3>
-Hu ambiwa Zwa upfi Mukalaha Vho Mutshaeni Vho Beba Neluheni!
-</h3>
+        <h3>Hu ambiwa Zwa upfi Mukalaha Vho Mutshaeni Vho Beba Neluheni!</h3>
+        <h2>Maelula :Luheni</h2>
+        <p> Vha Neluheni Vhahone futhi Nahone Vha kha Vhukoma Hangei Ha maelula</p>
+        <h2>Tshakhuma Luheni</h2>
+        <p> Vho dala Na Tshakhuma ,</p>
+        <p> fhuthi Vho phadalala Na shango lothe Namusi</p>
+        <h1>Vhadu Vhothe ?</h1>
+    </div>
+</body>
+</html>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -365,8 +362,6 @@ Today, the Vhadau Vhatshiheni clan, including the Masutha family, continues to p
 
 </body>
 </html>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -388,63 +383,25 @@ Today, the Vhadau Vhatshiheni clan, including the Masutha family, continues to p
 </head>
 <body>
     <div class="info-box">
-
-    <div class="info-box">
         <h2>Responses</h2>
         <div id="responses"></div>
     </div>
-
-
-</body>
-
-
-    </div>
-
-<p><a href="https://repository.up.ac.za/bitstream/handle/2263/61193/Munyai_Tenacity_2017.pdf?sequence=1">Neluheni,Madima And Mutshaeni, zwa Vhurereri ha Tshi christ</a>
-<p>
-
-
-<p>
-
-<p>
-
-Divha zwa kale ya Neluheni ikhadi sedzulusiwa.....
-
-
-
-<h3>Rambuda Attacke </h3>
-<p> Uya Nga Ha divha Zwakale ye ndaiwana Khavho Sam Neluheni , Havha Vha Neluheni Vha Tshi Phadalala Na mashango  
-<p>Hoya Havha Na Uthasalwe Ngavha Rambuda , ndi Musi Wa Phusuphusu Dza Dzimauli. , Manwe ama mapfumo anndwa vhe o sala Luheni Na fundudzi 
-<p>Havha Vha Luheni Vho Shavha Vhaya Kha mashango Obuliwaho Afho Fhasi , <a href="https://repository.nwu.ac.za/bitstream/10394/1002/1/nemudzivhadi_mphayahenry.pdf">Phusuphusu Dza Dzimauli</a>
-
-<p>SHANZHA LUHENI</p>
-<p> Vhanwe Vha Shanzha </p>
-
-<p> Vha neluheni Vhakhadivhusa Shanzha proof:<a href="https://limpopomirror.co.za/articles/news/21119/2013-09-13/six-petty-headmen-installed-in-shanzha-area">Shanzha Head Man</a></p> 
-
-
-
-
-
-<h2>Ratombo (Vhomadevha Neluheni)</h2>
-
-<p>vho Madevha vho ya ha Ratombo , nne ndiva Kha havha,   vho Vha vhe bulasini haratombo he vhavhulungelwa hone, vho vha vhana vha fumakadzi vhanzhisa ,  to conntinu......</p>
-
-
-
-<h2>Maelula  :Luheni</h2>
-
-<p> Vha Neluheni Vhahone futhi Nahone Vha kha Vhukoma Hangei Ha maelula
-
-<h2>Tshakhuma Luheni</h2>
-
-
-<p> Vho dala Na Tshakhuma ,</p>
-<p> fhuthi Vho phadalala Na shango lothe Namusi</p> 
-
-
-<h1>Vhadu Vhothe ?</h1>
-
+    <p><a href="https://repository.up.ac.za/bitstream/handle/2263/61193/Munyai_Tenacity_2017.pdf?sequence=1">Neluheni, Madima And Mutshaeni, zwa Vhurereri ha Tshi christ</a></p>
+    <p>Divha zwa kale ya Neluheni ikhadi sedzulusiwa.....</p>
+    <h3>Rambuda Attacke</h3>
+    <p> Uya Nga Ha divha Zwakale ye ndaiwana Khavho Sam Neluheni , Havha Vha Neluheni Vha Tshi Phadalala Na mashango  
+    <p>Hoya Havha Na Uthasalwe Ngavha Rambuda , ndi Musi Wa Phusuphusu Dza Dzimauli. , Manwe ama mapfumo anndwa vhe o sala Luheni Na fundudzi 
+    <p>Havha Vha Luheni Vho Shavha Vhaya Kha mashango Obuliwaho Afho Fhasi , <a href="https://repository.nwu.ac.za/bitstream/10394/1002/1/nemudzivhadi_mphayahenry.pdf">Phusuphusu Dza Dzimauli</a>
+    <p>SHANZHA LUHENI</p>
+    <p> Vhanwe Vha Shanzha </p>
+    <p> Vha neluheni Vhakhadivhusa Shanzha proof:<a href="https://limpopomirror.co.za/articles/news/21119/2013-09-13/six-petty-headmen-installed-in-shanzha-area">Shanzha Head Man</a></p> 
+    <h2>Ratombo (Vhomadevha Neluheni)</h2>
+    <p>vho Madevha vho ya ha Ratombo , nne ndiva Kha havha,   vho Vha vhe bulasini haratombo he vhavhulungelwa hone, vho vha vhana vha fumakadzi vhanzhisa ,  to conntinu......</p>
+    <h2>Maelula :Luheni</h2>
+    <p> Vha Neluheni Vhahone futhi Nahone Vha kha Vhukoma Hangei Ha maelula</p>
+    <h2>Tshakhuma Luheni</h2>
+    <p> Vho dala Na Tshakhuma ,</p>
+    <p> fhuthi Vho phadalala Na shango lothe Namusi</p> 
+    <h1>Vhadu Vhothe ?</h1>
 </body>
 </html>
-
