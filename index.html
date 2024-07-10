@@ -160,6 +160,58 @@
     <p>Vhadau Vha Vhatavhatsindi Vhatshiheni, Vha Fundudzi Lanyaphunga Tshena, Vhanyamalindi madala vhathu avhanwe atshidala Mavhele Vhanya Mutshimba Unakela munnyi asongo unyaho uri ndidoko ahee vhadau vhanya Kwita, vha ndevhe dza mapangu, vhadau vhaila mutshila wa mbudzi vhane vhakanda mupfa vhatudza khole ahee Luheni weee , aheee Tshiheni aheee Fundudzi</p>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Send WhatsApp Message</title>
+<style>
+    /* Basic styling for the form */
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+    form {
+        margin-top: 20px;
+    }
+    input[type="text"] {
+        padding: 10px;
+        width: 300px;
+        margin-right: 10px;
+    }
+    input[type="submit"] {
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+    <h2>Send WhatsApp Message</h2>
+    <form id="whatsapp-form">
+        <input type="text" id="message" placeholder="Enter your message" required>
+        <input type="submit" value="Send Message">
+    </form>
+
+    <script>
+        document.getElementById('whatsapp-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+            
+            // Replace with your WhatsApp number
+            var whatsappNumber = "0796128038";
+            
+            // Fetch message from input
+            var message = document.getElementById('message').value;
+            
+            // Construct the WhatsApp URL
+            var whatsappUrl = "https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(message);
+            
+            // Open WhatsApp in a new tab
+            window.open(whatsappUrl, '_blank');
+        });
+    </script>
+</body>
+</html>
 
 <!DOCTYPE html>
 <html lang="en">
