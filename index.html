@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">AA
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luheni Vhadau Vha Tshiheni Tsha Nyaphunga Tshena</title>
 
@@ -84,18 +84,7 @@
 </head>
 <body>
   <h1>MUTA WA NELUHENI</h1>
-        <button onclick="readText()">Read Text</button>
-    <script>
-        function readText() {
-            var speech = new SpeechSynthesisUtterance();
-            speech.lang = "en-US";
-            speech.text = document.querySelector('.content').textContent;
-            speech.volume = 1; // 0 to 1
-            speech.rate = 1; // 0.1 to 10
-            speech.pitch = 1; // 0 to 2
-            window.speechSynthesis.speak(speech);
-        }
-    </script>
+   
      <style>
         body {
             font-family: Arial, sans-serif;
