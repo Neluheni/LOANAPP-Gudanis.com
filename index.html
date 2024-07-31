@@ -188,259 +188,51 @@
         }
     </style>
 </head>
-<body>
-    <div class="navbar">
-        <a href="#home"><i class="fas fa-home"></i> Home</a>
-        <a href="https://neluheni.github.io/tree/"><i class="fas fa-scroll"></i> Nddu Ya Vho Madevha Neluheni (Nne Ndi tuma hafho)</a>
-        <a href="https://luonde.co.za/"><i class="fas fa-book"></i> Luonde History</a>
-    </div>
+<h1>INFOMATION UPGRADED      WE WILL BE BAck Soon </h1>
 
-    <header>
-        <img src="http://static1.squarespace.com/static/562cfd50e4b0db46045fb676/5968da22a803bb3693f5b811/5f90a2e0f7584476674704c4/1717894054920/?format=1500w" alt="Lion">
-        <h1>Tshiheni Tsha Nyaphunga Tshena</h1>
-    </header>
-
-    <div class="content">
-        <p>NNDU/Lutsinga Lwa Neluheni</p>
-        <p>Neluheni Ndi Mudau wa Mutavhatsindi wa Tshiheni</p>
-    </div>
-
-    <div class="container">
-        <img src="WhatsApp Image 2024-07-17 at 8.04.20 PM (1).jpeg" alt="Image 1">
-        <img src="WhatsApp Image 2024-07-17 at 8.04.20 PM.jpeg" alt="Image 2">
-        <img src="WhatsApp Image 2024-07-17 at 8.04.21 PM.jpeg" alt="Image 3">
-        <img src="WhatsApp Image 2024-07-17 at 8.04.22 PM (1).jpeg" alt="Image 4">
-        <img src="WhatsApp Image 2024-07-17 at 8.04.22 PM.jpeg" alt="Image 5">
-    </div>
-
-    <h2>Vha nga Rumela Zwine vhadivha nda nndu Ya Neluheni</h2>
-    <form id="whatsapp-form">
-        <input type="text" id="message" placeholder="Enter your message" required>
-        <input type="submit" value="Send Message">
-    </form>
-    <script>
-        document.getElementById('whatsapp-form').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent form submission
-
-            // Replace with your WhatsApp number
-            var whatsappNumber = "27796128038";
-
-            // Fetch message from input
-            var message = document.getElementById('message').value;
-
-            // Construct the WhatsApp URL
-            var whatsappUrl = "https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(message);
-
-            // Open WhatsApp in a new tab
-            window.open(whatsappUrl, '_blank');
-        });
-    </script>
-
-    <div id="map"></div>
-    <script>
-        // Initialize the map
-        var map = L.map('map').setView([-22.808101464006597, 30.367735966032956], 12);
-
-        // Orthophoto layer (example using OpenStreetMap data)
-        var orthophotoLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            maxZoom: 19,
-            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(map);
-
-        // DEM layer (example using Stamen Terrain)
-        var demLayer = L.tileLayer('http://tile.stamen.com/terrain/{z}/{x}/{y}.jpg', {
-            maxZoom: 18,
-            attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>'
-        });
-
-        // Add a marker for Luheni
-        var luheniMarker = L.marker([-22.808101464006597, 30.367735966032956]).addTo(map);
-        luheniMarker.bindPopup("<b>Luheni</b>").openPopup();
-
-        // Add layer control
-        var baseLayers = {
-            "Orthophoto": orthophotoLayer,
-            "DEM": demLayer
-        };
-
-        L.control.layers(baseLayers).addTo(map);
-    </script>
-
-    <div class="info-box">
-        <h2>History of Neluheni</h2>
-        <p>Johannes Mutshaeni, who worked closely with Beuster, contributed greatly to the establishment of the mission station. Mutshaeni (also known as Malindi Neluheni) was born at Tshiheni, an area close to Lake Fundudzi, and was brought up there (Mathivha 1985:45). At that time many youth flocked to Kimberly (Khimbini) in search of wealth. Mutshaeni also</p>
-        <div class="emoji">🌊</div>
-        <h2>Mutshaeni and Neluheni</h2>
-        <p>Tshiheni Tshatshiongo, Fundudzi La Nyaphungatshena. Fundudzi La muitazwivo, wa murahu e ndi doko! La Nyamalindi a dala vhathu, A vhavhe a tshi dala mavhele Vha lutsinga lwa</p>
-        <p>Ndiitwani, Masutha, Manyaga, Madima, Mutshaeni na Maraga!</p>
-        <p>Vho Nefundudzi lisiho hunwe, Nga ngwena, khovhe na nngu tshitangadzimeni, Ene dzolokwe Mutavhatsindi asalinga, Tshifhe thi nangwi nga zwiḓuḓwane na khuli! Fundudzi ḽi midza Khomba dza vhadzimu. Khuni ḓzalo zwifhoni a dzi na mureḓi. Ndi vhonelapwata mutonzela Khomba tshilindo Fundudzi ḽa mulambotswuka vhukati(Mutale) Mi... fhululuuuu!</p>
-        <p>Fundudzi lanyaphunga tshena</p>
-        <h3>Hu ambiwa Zwa upfi Mukalaha Vho Mutshaeni Vho Beba Neluheni!</h3>
-        <h2>Maelula :Luheni</h2>
-        <p>Vha Neluheni Vhahone futhi Nahone Vha kha Vhukoma Hangei Ha maelula</p>
-        <h2>Tshakhuma Luheni</h2>
-        <p>Vho dala Na Tshakhuma, fhuthi Vho phadalala Na shango lothe Namusi</p>
-    </div>
-
-    <div class="info-box">
-        <h2>Drag and Drop History Info</h2>
-        <div class="person" draggable="true" data-info="Ndiitwani, Masutha, Manyaga, Madima, Mutshaeni: (huambiwa nga mukalaha Mutshaeni/Mutshaini/mutshayeni hupfi obeba Neluheni?) na Maraga!" ondragstart="drag(event)">Ndiitwani, Masutha, Manyaga, Madima, Mutshaeni: (huambiwa nga mukalaha Mutshaeni/Mutshaini/mutshayeni hupfi obeba Neluheni?) na Maraga!</div>
-        <div id="info-area"></div>
-    </div>
-
-    <div class="info-box">
-        <h2>Responses</h2>
-        <div id="responses"></div>
-        <p><a href="https://repository.up.ac.za/bitstream/handle/2263/61193/Munyai_Tenacity_2017.pdf?sequence=1">Neluheni, Madima And Mutshaeni, zwa Vhurereri ha Tshi christ</a></p>
-        <p>Divha zwa kale ya Neluheni ikhadi sedzulusiwa.....</p>
-        <h3>Rambuda Attacke</h3>
-        <p>Uya Nga Ha divha Zwakale ye ndaiwana Khavho Sam Neluheni, Havha Vha Neluheni Vha Tshi Phadalala Na mashango</p>
-        <p>Hoya Havha Na Uthasalwe Ngavha Rambuda, ndi Musi Wa Phusuphusu Dza Dzimauli. , Manwe ama mapfumo anndwa vhe o sala Luheni Na fundudzi</p>
-        <p>Havha Vha Luheni Vho Shavha Vhaya Kha mashango Obuliwaho Afho Fhasi, <a href="https://repository.nwu.ac.za/bitstream/10394/1002/1/nemudzivhadi_mphayahenry.pdf">Phusuphusu Dza Dzimauli</a></p>
-        <p>SHANZHA LUHENI</p>
-        <p>Vhanwe Vha Shanzha</p>
-        <p>Vha neluheni Vhakhadivhusa Shanzha proof:<a href="https://limpopomirror.co.za/articles/news/21119/2013-09-13/six-petty-headmen-installed-in-shanzha-area">Shanzha Head Man</a></p>
-        <h2>Ratombo (Vhomadevha Neluheni)</h2>
-        <p>vho Madevha vho ya ha Ratombo, nne ndiva Kha havha, vho Vha vhe bulasini haratombo he vhavhulungelwa hone, vho vha vhana vha fumakadzi vhanzhisa, to conntinu......</p>
-        <h2>Maelula :Luheni</h2>
-        <p>Vha Neluheni Vhahone futhi Nahone Vha kha Vhukoma Hangei Ha maelula</p>
-        <h2>Tshakhuma Luheni</h2>
-        <p>Vho dala Na Tshakhuma, fhuthi Vho phadalala Na shango lothe Namusi</p>
-        <h1>Vhadau Vhothe ?</h1>
-        <h2>zwinwe zwa zwifani zwa vhadau vhothe. ndi zwitevhelaho</h2>
-        <h2>Zwifani zwa Vhadau vha Tshiheni!!</h2>
-        <ul>
-            <li>1. Netshiheni</li>
-            <li>2. Mudau(Rina Vha Damani )</li>
-            <li>3. Ṋephiphiḓi</li>
-            <li>4. Magidi</li>
-            <li>5. Malada</li>
-            <li>6. Tshiovhe</li>
-            <li>7. Nephembani</li>
-            <li>8. Nethenzheni</li>
-            <li>9. Netshiluvhi</li>
-            <li>10. Mabidi</li>
-            <li>11. Muilafuri</li>
-            <li>12. Mahandana</li>
-            <li>13. Maṱhase</li>
-            <li>14. Ṋevhuṱalu</li>
-            <li>15. Raphunga</li>
-            <li>16. Madzuhe</li>
-            <li>17. Ṋengovhela</li>
-            <li>18. Masakona</li>
-            <li>19. Murovhi</li>
-            <li>20. Netshikhudini</li>
-            <li>21. Mantsha</li>
-            <li>22. Phunge</li>
-            <li>23. Sivhidzho</li>
-            <li>24. Tshiakale</li>
-            <li>25. Maswime</li>
-            <li>26. Negogobole</li>
-            <li>27. Sithanugeni</li>
-            <li>28. Mahaseni</li>
-            <li>29. Mavhune</li>
-            <li>30. Mavhuṱhugu</li>
-            <li>31. Dzhivhuwo</li>
-            <li>32. Nethwadzi</li>
-            <li>33. Mphinyani</li>
-            <li>34. Ramagoma</li>
-            <li>35. Mafela</li>
-            <li>36. Matshikiri</li>
-            <li>37. Ṱambani</li>
-            <li>38. Ramunangi</li>
-            <li>39. Malima</li>
-            <li>40. Nekhaguma</li>
-            <li>41. Magonono</li>
-            <li>42. Phaswana</li>
-            <li>43. Masimbane</li>
-            <li>44. Malidzhi</li>
-            <li>45. Ramuseṱheli</li>
-            <li>46. Ṋegovhe</li>
-            <li>47. Netsharotha</li>
-            <li>48. Ramuungwa</li>
-            <li>49. Ramadwa</li>
-            <li>50. Ramaṋenzhe</li>
-            <li>51. Ṋenzhelele</li>
-            <li>52. Ramuhulu</li>
-            <li>53. Bvumbi</li>
-            <li>54. Netshidaulu</li>
-            <li>55. Nesindande</li>
-            <li>56. Matodzi</li>
-            <li>57. Nebogwe</li>
-            <li>58. Sipholi</li>
-            <li>59. Mamphodo</li>
-            <li>60. Rasirubu</li>
-            <li>61. Netsianḓa</li>
-            <li>62. Ṋemuramba</li>
-            <li>63. Ṋetshiṱungulu</li>
-            <li>64. Magalela</li>
-            <li>65. Nndwambi</li>
-            <li>66. Rasimphi</li>
-            <li>67. Tshivhandekano</li>
-            <li>68. Khavhadi</li>
-            <li>69. Mammba</li>
-            <li>70. Mutshembele</li>
-            <li>71. Makhari "Gogogo"</li>
-            <li>72. Mutshaina "Fondwe"</li>
-            <li>73. Ṋenungwi</li>
-            <li>74. Nevhulorwa</li>
-            <li>75. Nengome</li>
-            <li>76. Makhethakhetha</li>
-            <li>77. Muofhe "Nenwali" = Tshilungoma</li>
-            <li>78. Muthikhitha " Tshilungoma"</li>
-            <li>79. Nemakonde "Tshikhudini"</li>
-            <li>80. Silima " Tshitomboni"</li>
-            <li>81. Rakhumba " Tshilungoma"</li>
-            <li>82. Nevari</li>
-            <li>83. Nedzamba " ri ḽi sedzuluse hu na Nedzamba wa Luvhimbi, hone Tshiluvhi Nedzamba u hone na Phiphiḓi ha Ramuṋangi"</li>
-            <li>84. Negovha</li>
-            <li>85. Neluheni</li>
-            <li>86. Masutha</li>
-            <li>87. Mutshaeni/Mutshaini/Mutshayeni</li>
-            <li>88. Madima Wa Mudau</li>
-            <li>89. Marage/Maraga</li>
-            <li>90. Nekhubvi</li>
-            <li>91. Madevha( Vha Ha Neluheni)</li>
-        </ul>
-    </div>
-
-    <div class="info-box">
-        <h3>Terminology</h3>
-        <h2>Tshiheni Tshihe/mahe ndi matombo: hafho Tshiheni ndi dzi thavhani</h2>
-        <p>Luheni: Luhe/mahe ndi matombo: hafho Luheni ndi dzi thavhani</p>
-        <p>Fundudzi: ndi Mulambo Wa Vhadzimu</p>
-        <p>Phiphidi, Philiphili Dzamadi</p>
-        <p>Mudau/ Dau /Ndau/Mutaung</p>
-        <p>Mutavhatsindi Ndi Murereri zwa zwidzimu zwa hanefho(rine rivha Fundunzi)</p>
-        <p>Mungona: Munne washango lo thalaho Phukha dza nama</p>
-        <p>NyaphungaTshena: Rothe Vhadau vhatshiheni Ro tuma Kha Vho Nyaphunga Tshena, tshiheni Ndi Tsha Nyaphunga Tshena</p>
-        <p>Tshilwa: Mutshila wa mbudzi, Muano Phunge(nwana Wa ndau) vha fumakadzi vhari Vhulwe</p>
-        <h1>Tshikhodo Tsha Vhadau Vhothe Vhatsiheni</h1>
-        <p>Mudau wa Tshiheni Tshanyaphunga Tshena, Ene Mukoma Wa phunga Mavhele, Ndi vhathu vha Minenzeni Vha Miri idolwaho, miri minaka Uvhada Phetho Isnanaki uvhada mpfo ,....</p>
-    </div>
-
-    <script>
-        function drag(event) {
-            event.dataTransfer.setData("text", event.target.getAttribute('data-info'));
+    <NELUHENI>NELUHENI HISTORY </NELUHENI>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Offline</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            color: #333;
+            text-align: center;
         }
-
-        const infoArea = document.getElementById('info-area');
-
-        infoArea.addEventListener('dragover', function(event) {
-            event.preventDefault();
-        });
-
-        infoArea.addEventListener('drop', function(event) {
-            event.preventDefault();
-            const infoText = event.dataTransfer.getData("text");
-
-            infoArea.innerHTML = '';
-
-            const infoCard = document.createElement('div');
-            infoCard.classList.add('info-card');
-            infoCard.textContent = infoText;
-            infoArea.appendChild(infoCard);
-        });
-    </script>
+        .container {
+            max-width: 600px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            font-size: 2em;
+            margin: 0;
+        }
+        p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Web Offline</h1>
+        <p>We are currently experiencing technical difficulties. Please be back soon.</p>
+    </div>
 </body>
+</html>
+
 </html>
