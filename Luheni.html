@@ -5,16 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luheni Village Map</title>
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luheni Village Map</title>
+    <title>Luheni and Fundudzi Orthophoto Map</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <style>
         #map {
-            height: 400px; /* Adjust the height as needed */
+            height: 100vh; /* Full height */
             width: 100%; /* Full width */
         }
     </style>
@@ -23,19 +24,32 @@
     <div id="map"></div>
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script>
-        var map = L.map('map').setView([-23.4162, 30.7826], 15); // Replace with the coordinates for Luheni Village
+        var map = L.map('map').setView([-23.4162, 30.7826], 15); // Coordinates for Luheni
 
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/satellite-v9/tiles/{z}/{x}/{y}?access_token=YOUR_MAPBOX_ACCESS_TOKEN', {
+            maxZoom: 20,
+            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+            tileSize: 512,
+            zoomOffset: -1,
+            id: 'mapbox/satellite-v9',
+            accessToken: 'YOUR_MAPBOX_ACCESS_TOKEN'
         }).addTo(map);
 
+        // Marker for Luheni
         L.marker([-23.4162, 30.7826]).addTo(map)
             .bindPopup('Luheni Village')
+            .openPopup();
+
+        // Coordinates for Fundudzi
+        var fundudziCoords = [-23.3333, 30.6167]; // Replace with actual coordinates if available
+
+        // Marker for Fundudzi
+        L.marker(fundudziCoords).addTo(map)
+            .bindPopup('Fundudzi')
             .openPopup();
     </script>
 </body>
 </html>
-
 
 <style>
 transition: background-color 0.3s ease;
