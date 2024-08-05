@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading Screen</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            font-size: 20px;
+            z-index: 1000;
+        }
+        .loader img {
+            width: 50px;
+            height: 50px;
+            margin-right: 20px;
+        }
+        .content {
+            display: none;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="loader" id="loader">
+        <img src="https://image.shutterstock.com/image-vector/lock-icon-padlock-security-sign-260nw-1539900443.jpg" alt="Lock Icon">
+        <div>
+            <div>Loading...</div>
+            <div id="loadingMessage">We are still gathering full history of Neluheni. Be back soon...</div>
+        </div>
+    </div>
+    <div class="content" id="content">
+     
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(function() {
+                document.getElementById('loader').style.display = 'none';
+                document.getElementById('content').style.display = 'block';
+            }, 10000); // 10 seconds
+        });
+    </script>
+</body>
+</html>
