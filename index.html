@@ -7,7 +7,92 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bostrip/dist/css/bostrip.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header with Menu</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="menu-bar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Luheni</a></li>
+                <li><a href="#">Neluheni History</a></li>
+                <li><a href="#">Tshiheni</a></li>
+                <li><a href="#">Fundudzi</a></li>
+                <li><a href="#">Zwifani zwa Vhadau</a>
+                </li>
+            </ul>
+        </div>
+        <div class="header-content">
+            <h1>NELUHENI MUDAU WA MUTAVHATSINDI WA TSHIHENI</h1>
+        </div>
+    </header>
+    <script src="script.js"></script>
+</body>
+</html>
+
     <style>
+        body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    position: relative;
+    height: 100vh;
+    background-image: url('https://lh3.googleusercontent.com/5Y9emaZifnFBNheglNHqvSFEawsP9trxoUn6xBeGGEtJ-wThRlGjy58hgvUqQx77dzW7YCq2VEI4sI_05z-w=s500');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-bar {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.menu-bar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.menu-bar ul li {
+    display: block;
+}
+
+.menu-bar ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    display: block;
+}
+
+.menu-bar ul li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.header-content h1 {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-size: 2.5em;
+    text-align: center;
+}
+
         body {
             margin: 0;
             font-family: Arial, sans-serif;
