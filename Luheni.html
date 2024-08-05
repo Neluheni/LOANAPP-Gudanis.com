@@ -4,7 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Header with News Boxes</title>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigate to Specific Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <button id="backButton" class="back-button">Back</button>
+    <script src="script.js"></script>
+</body>
+</html>
+<script>
+    document.getElementById('backButton').addEventListener('click', function() {
+    window.location.href = 'https://www.example.com'; // Replace with the URL of the page you want to navigate to
+});
+
+</script>
     <style>
+        .back-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #0056b3;
+}
+
         @media (max-width: 768px) {
     .news-section {
         flex-direction: column;
