@@ -4,37 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luheni Village Map</title>
- <!DOCTYPE html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luheni Village Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <style>
         #map {
             height: 400px; /* Adjust the height as needed */
             width: 100%; /* Full width */
         }
     </style>
-    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
-    <script>
-        function initMap() {
-            var luheni = { lat: -23.4162, lng: 30.7826 }; // Replace with the coordinates for Luheni Village
-            var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 15, // Higher zoom level for a more detailed view
-                center: luheni,
-                mapTypeId: 'hybrid' // Optional: Use 'roadmap', 'satellite', 'hybrid', or 'terrain'
-            });
-            var marker = new google.maps.Marker({
-                position: luheni,
-                map: map,
-                title: 'Luheni Village'
-            });
-        }
-    </script>
 </head>
 <body>
     <div id="map"></div>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        var map = L.map('map').setView([-23.4162, 30.7826], 15); // Replace with the coordinates for Luheni Village
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        L.marker([-23.4162, 30.7826]).addTo(map)
+            .bindPopup('Luheni Village')
+            .openPopup();
+    </script>
 </body>
 </html>
 
