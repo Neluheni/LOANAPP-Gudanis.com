@@ -33,25 +33,29 @@ function hideLoader() {
 }
 
 // Example usage: Show the loader when making an API request
-function showLoader() {
-  document.querySelector('.loader-container').style.display = 'flex';
-}
+ <script>
+        document.getElementById('backButton').addEventListener('click', function() {
+            window.location.href = 'https://neluheni.github.io/NeluheniDau/#'; // Replace with the URL of the page you want to navigate to
+        });
 
-function hideLoader() {
-  document.querySelector('.loader-container').style.display = 'none';
-}
+        function showLoader() {
+            document.querySelector('.loader-container').style.display = 'flex';
+        }
 
-// Function to simulate a process and hide the loader after 5 seconds
-function simulateProcess() {
-  showLoader();
-  setTimeout(() => {
-    hideLoader();
-  }, 5000); // 5000 milliseconds = 5 seconds
-}
+        function hideLoader() {
+            document.querySelector('.loader-container').style.display = 'none';
+        }
 
-// Call the function to see the loader in action
-simulateProcess();
+        function simulateProcess() {
+            showLoader();
+            setTimeout(() => {
+                hideLoader();
+            }, 5000); // 5000 milliseconds = 5 seconds
+        }
 
+        // Call the function to see the loader in action
+        simulateProcess();
+    </script>
 </script>
     <div class="loader-container">
   <div class="loader"></div>
