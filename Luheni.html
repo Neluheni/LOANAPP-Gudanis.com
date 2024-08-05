@@ -4,33 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luheni Village Map</title>
-    <style>
-        #map {
-            height: 100vh;
-            width: 100%;
-        }
-    </style>
-    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY" async defer></script>
-    <script>
-        function initMap() {
-            var luheni = { lat: -23.4162, lng: 30.7826 }; // Coordinates for Luheni Village
-            var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 15,
-                center: luheni
-            });
-            var marker = new google.maps.Marker({
-                position: luheni,
-                map: map,
-                title: 'Luheni Village'
-            });
-        }
-        window.onload = initMap;
-    </script>
-</head>
-<body>
-    <div id="map"></div>
-</body>
-</html>
+ 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,7 +21,37 @@
             padding: 10px 20px;
             font-size: 16px;
             cursor: pointer;
-            transition: background-color 0.3s ease;
+            <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luheni Village Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        #map {
+            height: 100vh;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        var map = L.map('map').setView([ -23.4162, 30.7826 ], 15); // Coordinates for Luheni Village
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        L.marker([ -23.4162, 30.7826 ]).addTo(map)
+            .bindPopup('Luheni Village')
+            .openPopup();
+    </script>
+</body>
+</html>
+transition: background-color 0.3s ease;
         }
 
         .back-button:hover {
