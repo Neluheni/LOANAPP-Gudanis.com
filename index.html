@@ -5,84 +5,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Header with Menu</title>
     <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            font-family: Arial, sans-serif;
-        }
+     body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
 
-        header {
-            position: relative;
-            height: 100vh;
-            background-image: url('https://lh3.googleusercontent.com/5Y9emaZifnFBNheglNHqvSFEawsP9trxoUn6xBeGGEtJ-wThRlGjy58hgvUqQx77dzW7YCq2VEI4sI_05z-w=s500');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+header {
+    position: relative;
+    height: 100vh;
+    background-image: url('https://lh3.googleusercontent.com/5Y9emaZifnFBNheglNHqvSFEawsP9trxoUn6xBeGGEtJ-wThRlGjy58hgvUqQx77dzW7YCq2VEI4sI_05z-w=s500');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-        .menu-toggle {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            font-size: 30px;
-            color: white;
-            cursor: pointer;
-            z-index: 2;
-        }
+.menu-bar {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
 
-        .menu-bar {
-            position: absolute;
-            top: 20px;
-            left: -250px; /* Start off-screen */
-            width: 250px;
-            background: rgba(0, 0, 0, 0.8);
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            transition: left 0.3s ease-in-out;
-            z-index: 1;
-        }
+.menu-bar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
 
-        .menu-bar ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
+.menu-bar ul li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
 
-        .menu-bar ul li {
-            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-        }
+.menu-bar ul li:last-child {
+    border-bottom: none;
+}
 
-        .menu-bar ul li:last-child {
-            border-bottom: none;
-        }
+.menu-bar ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 15px 20px;
+    display: block;
+    font-size: 16px;
+    transition: background 0.3s;
+}
 
-        .menu-bar ul li a {
-            text-decoration: none;
-            color: white;
-            padding: 15px 20px;
-            display: block;
-            font-size: 16px;
-            transition: background 0.3s;
-        }
+.menu-bar ul li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
 
-        .menu-bar ul li a:hover {
-            background: rgba(255, 255, 255, 0.2);
-        }
+.header-content h1 {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-size: 2.5em;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
 
-        .header-content h1 {
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-            font-size: 2.5em;
-            text-align: center;
-            margin: 0;
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.5);
-            border-radius: 10px;
-        }
     </style>
 </head>
 <body>
