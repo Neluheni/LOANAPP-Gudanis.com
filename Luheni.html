@@ -1,1 +1,88 @@
-HI
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header with News Boxes</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            text-align: center;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        .header-content img {
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .header-text {
+            margin: 20px 0;
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        .news-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .news-box {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .news-box h3 {
+            margin-top: 0;
+        }
+
+        .news-box p {
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="https://lh3.googleusercontent.com/5Y9emaZifnFBNheglNHqvSFEawsP9trxoUn6xBeGGEtJ-wThRlGjy58hgvUqQx77dzW7YCq2VEI4sI_05z-w=s500" alt="Luheni">
+            <div class="header-text">
+                Hafha ndi Luheni shango la Vho makhulukuku Vho Neluheni, Shango La luheni li Seli ha fundudzi, musi ri Tshiheni, shango ilo lo ita Thathavha, ngazwo hopfi Luheni. Luheni ndi shango la Mungona, Mudau wa Mutavhatsindi wa Tshiheni Neluheni, lo thubiwa Nga vha Rambuda musi vha tshithasela Vha Neluheni, A hee Luheni.
+            </div>
+        </div>
+    </header>
+
+    <section class="news-section">
+        <div class="news-box">
+            <h3>News Title 1</h3>
+            <p>This is a short description of the news item. It gives a brief overview of the news content.</p>
+        </div>
+        <div class="news-box">
+            <h3>News Title 2</h3>
+            <p>This is a short description of the news item. It gives a brief overview of the news content.</p>
+        </div>
+        <div class="news-box">
+            <h3>News Title 3</h3>
+            <p>This is a short description of the news item. It gives a brief overview of the news content.</p>
+        </div>
+        <div class="news-box">
+            <h3>News Title 4</h3>
+            <p>This is a short description of the news item. It gives a brief overview of the news content.</p>
+        </div>
+    </section>
+</body>
+</html>
