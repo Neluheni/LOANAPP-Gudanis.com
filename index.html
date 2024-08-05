@@ -22,7 +22,7 @@
         </div>
     </header>
     <style>
-       body, html {
+     body, html {
     margin: 0;
     padding: 0;
     height: 100%;
@@ -40,14 +40,27 @@ header {
     align-items: center;
 }
 
-.menu-bar {
+.menu-toggle {
     position: absolute;
     top: 20px;
     left: 20px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-bar {
+    position: absolute;
+    top: 20px;
+    left: -250px; /* Start off-screen */
+    width: 250px;
     background: rgba(0, 0, 0, 0.8);
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: left 0.3s ease-in-out;
+    z-index: 1;
 }
 
 .menu-bar ul {
@@ -88,7 +101,18 @@ header {
     border-radius: 10px;
 }
 
+
     </style>
-    <script src="script.js"></script>
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+    var menuBar = document.getElementById('menu-bar');
+    if (menuBar.style.left === '0px') {
+        menuBar.style.left = '-250px';
+    } else {
+        menuBar.style.left = '0px';
+    }
+});
+
+    </script>
 </body>
 </html>
