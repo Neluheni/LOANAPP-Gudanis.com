@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loading and Redirect</title>
+    <title>Loading and Popup</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -13,28 +14,13 @@
             height: 100vh;
             margin: 0;
             background-color: #f0f0f0;
-        }
-
-        .back-button {
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .back-button:hover {
-            background-color: #0056b3;
+            overflow: hidden;
         }
 
         .loading {
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin-top: 20px;
         }
 
         .hidden {
@@ -55,12 +41,6 @@
             100% { transform: rotate(360deg); }
         }
 
-        .lock-pad {
-            width: 30px;
-            height: 30px;
-            margin-top: 10px;
-        }
-
         .popup {
             display: none;
             position: absolute;
@@ -75,44 +55,40 @@
             text-align: center;
         }
 
-        .popup img {
-            width: 30px;
-            height: 30px;
-            margin-top: 10px;
+        .popup i {
+            font-size: 30px;
+            color: #007bff;
+            margin-bottom: 10px;
         }
     </style>
 </head>
 <body>
-    <button id="backButton" class="back-button">Back</button>
-    <div id="loading" class="loading hidden">
+    <div id="loading" class="loading">
         <div class="loader"></div>
     </div>
     <div id="popup" class="popup">
-        <p>We are still gathering full history of Neluheni. Be back soon...</p>
-        <img src="lock-pad-icon.png" alt="Lock Pad" class="lock-pad">
+        <i class="fas fa-lock"></i>
+        <p>We are still gathering the full history of Neluheni. Be back soon...</p>
     </div>
 
     <script>
-        document.getElementById('backButton').addEventListener('click', function() {
-            // Show loading animation
-            const loadingElement = document.getElementById('loading');
-            const popupElement = document.getElementById('popup');
-            loadingElement.classList.remove('hidden');
+        // Show loading animation
+        const loadingElement = document.getElementById('loading');
+        const popupElement = document.getElementById('popup');
 
-            // Hide the button
-            this.style.display = 'none';
+        // Show loading animation initially
+        loadingElement.classList.remove('hidden');
 
-            // Wait for 10 seconds before showing the popup
-            setTimeout(function() {
-                loadingElement.classList.add('hidden');
-                popupElement.style.display = 'block';
+        // Wait for 10 seconds before showing the popup
+        setTimeout(function() {
+            loadingElement.classList.add('hidden');
+            popupElement.style.display = 'block';
 
-                // Hide the popup after an additional delay
-                setTimeout(function() {
-                    window.location.href = 'https://www.example.com'; // Replace with your URL
-                }, 5000); // Popup display duration (5 seconds)
-            }, 10000); // Loading duration (10 seconds)
-        });
+            // Optionally, you can hide the popup after an additional delay
+            // setTimeout(function() {
+            //     popupElement.style.display = 'none';
+            // }, 5000); // Popup display duration (5 seconds)
+        }, 10000); // Loading duration (10 seconds)
     </script>
 </body>
 </html>
