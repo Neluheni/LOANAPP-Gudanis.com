@@ -33,27 +33,32 @@ function hideLoader() {
 }
 
 // Example usage: Show the loader when making an API request
-function fetchData() {
-  showLoader();
-  fetch('https://example.com/api/data')
-    .then(response => response.json())
-    .then(data => {
-      // Process the data
-    })
-    .finally(() => {
-      hideLoader();
-    });
+function showLoader() {
+  document.querySelector('.loader-container').style.display = 'flex';
 }
 
-// Call fetchData to see the loader in action
-fetchData();
+function hideLoader() {
+  document.querySelector('.loader-container').style.display = 'none';
+}
+
+// Function to simulate a process and hide the loader after 5 seconds
+function simulateProcess() {
+  showLoader();
+  setTimeout(() => {
+    hideLoader();
+  }, 5000); // 5000 milliseconds = 5 seconds
+}
+
+// Call the function to see the loader in action
+simulateProcess();
+
 </script>
     <div class="loader-container">
   <div class="loader"></div>
 </div>
 
     <style>
-        .loader-container {
+.loader-container {
   position: fixed;
   top: 0;
   left: 0;
@@ -78,6 +83,8 @@ fetchData();
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+100% { transform: rotate(360deg); }
 }
 
         .back-button {
