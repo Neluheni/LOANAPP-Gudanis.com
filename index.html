@@ -1,169 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NELUHENI </title>
-
-
-    <div class="menu-bar" id="menu-bar">
-    <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="https://neluheni.github.io/NeluheniDau/Luheni.html">Luheni</a></li>
-        <li><a href="history.html">Neluheni History</a></li>
-        <li>
-       
-        </li>
-    </ul>
-</div>
-  
-
+    <title>PowerApps Embed</title>
     <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            font-family: Arial, sans-serif;
-        }
-
-        header {
-            position: relative;
-            height: 100vh;
-            background-image: url('https://lh3.googleusercontent.com/5Y9emaZifnFBNheglNHqvSFEawsP9trxoUn6xBeGGEtJ-wThRlGjy58hgvUqQx77dzW7YCq2VEI4sI_05z-w=s500');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .menu-toggle {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            font-size: 30px;
-            color: white;
-            cursor: pointer;
-            z-index: 2;
-            background: rgba(0, 0, 0, 0.5);
-            padding: 10px;
-            border-radius: 5px;
-        }
-
-        .menu-bar {
-            position: absolute;
-            top: 20px;
-            left: -250px; /* Start off-screen */
-            width: 250px;
-            background: rgba(0, 0, 0, 0.8);
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            transition: left 0.3s ease-in-out;
-            z-index: 1;
-        }
-
-        .menu-bar ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .menu-bar ul li {
-            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .menu-bar ul li:last-child {
-            border-bottom: none;
-        }
-
-        .menu-bar ul li a {
-            text-decoration: none;
-            color: white;
-            padding: 15px 20px;
-            display: block;
-            font-size: 16px;
-            transition: background 0.3s;
-        }
-
-        .menu-bar ul li a:hover {
-            background: rgba(255, 255, 255, 0.2);
-        }
-
-        .header-content h1 {
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-            font-size: 2.5em;
-            text-align: center;
-            margin: 0;
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.5);
-            border-radius: 10px;
-        }
-    </style>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-</head>
-<body>
-    <header>
-        <div class="menu-toggle" id="menu-toggle">
-            ☰
-        </div>
-        <div class="menu-bar" id="menu-bar">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="https://neluheni.github.io/NeluheniDau/Luheni.html">Luheni</a></li>
-                <li><a href="history.html">Neluheni History</a></li>
-                <li>
-                    <div class="g-recaptcha" data-sitekey="your-site-key"></div>
-                </li>
-            </ul>
-        </div>
-        <div class="header-content">
-            <h1>NELUHENI MUDAU WA MUTAVHATSINDI WA TSHIHENI</h1>
-            <h6>Aheee Luheni aheee </h6>
-        </div>
-    </header>
-    <script>
-        document.getElementById('menu-toggle').addEventListener('click', function() {
-            var menuBar = document.getElementById('menu-bar');
-            if (menuBar.style.left === '0px') {
-                menuBar.style.left = '-250px';
-            } else {
-                menuBar.style.left = '0px';
-            }
-        });
-    </script>
-    <style>
+        /* General body styling */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
+            background-color: #f0f0f0;
         }
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 1em 0;
-            position: relative;
-            bottom: 0;
+
+        /* Container for the PowerApps iframe */
+        .powerapps-container {
+            margin: 20px auto;
+            padding: 10px;
+            max-width: 1200px;
+            background-color: white;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        /* Styling the iframe */
+        iframe {
             width: 100%;
+            height: 600px;
+            border-radius: 8px;
+            border: none;
+        }
+
+        /* Optional: Make the iframe responsive */
+        @media (max-width: 768px) {
+            iframe {
+                height: 400px;
+            }
         }
     </style>
 </head>
 <body>
-
-    <!-- Content of the page -->
-    <div style="flex-grow: 1;">
-        <!-- Page content goes here -->
+    <div class="powerapps-container">
+        <iframe src="https://apps.powerapps.com/play/e/c2a123ef-3d24-e6f9-8bb7-807c549ddd4d/a/e2dc5d68-6414-427f-8327-41e6722eb961?tenantId=49beb26c-5ac3-45ea-92f9-90b1f238c99f&sourcetime=1736411157425#"
+            width="100%" height="600px" frameborder="0" allowfullscreen="true">
+        </iframe>
     </div>
-
-    <footer>
-        &copy; 2024 Created by Neluheni Mutshidzi Ramudzuli
-    </footer>
 </body>
-    
 </html>
